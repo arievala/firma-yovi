@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+
+        @font-face {
+            font-family: Montserrat;
+            src: url("src/montserrat/Montserrat-VariableFont_wght.ttf");
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Montserrat;
+        }
+        .card {
+            background: white;
+            border: 1px solid black;
+            min-width: 80%;
+            max-width: 80%;
+            display: flex;
+            min-height: 300px;
+        }
+
+        .card__izquierdo {
+            background-image: url(img/Fondo_Rombos_Azules_Texturizado_con_Sombra_Interior.png);
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .contenedor-imagen-perfil {
+            background-image: url(img/MC-Fondo_de_Foto.png);
+            background-size: 100%;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card__izquierdo--imagen {
+            width: 77%;
+            max-width: 300px;
+        }
+        
+        .card__derecho {
+            display: flex;
+            flex-direction: column;
+            padding: 10px 30px;
+        }
+        
+        .card__derecho--nombre {
+            color: #004C90;
+            font-size: 1.4rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+        }
+        
+        .enlace {
+            text-decoration: none;
+        }
+
+        .contenedor-datos-planta {
+            margin-bottom: 1rem;
+        }
+        
+        .contenedor-datos-planta--puesto {
+            font-size: 0.8rem;
+            color: #918F8F;
+            font-weight: 600;
+        }
+        
+        .contenedor-redes-sociales {
+            width: 40%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 1rem;
+        }
+
+        .icono {
+            width: 1.5rem;
+        }
+
+        .contenedor-imagenes-corporativas {
+            max-width: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .imagenes-corporativas {
+            width: 40%;
+            border: 1px solid blue;
+            max-height: 58px;
+        }
+
+        @media only screen and (max-width:540px){
+            .card__izquierdo {
+                flex-grow: 1;
+            }
+
+            .card__derecho {
+                flex-grow: 3;
+            }
+        }
+    </style>
+</head>
+<body id="cuerpo">
+    <div class="card" id="card">
+        <div class="card__izquierdo">
+            <div class="contenedor-imagen-perfil">
+                <img src="./img/Foto_Circular_sin_Fondo.png" alt="Foto de perfil" class="card__izquierdo--imagen">
+            </div>
+        </div>
+
+        <div class="card__derecho">
+            <p class="card__derecho--nombre">Yovi Morales Morales</p>
+
+            <div class="contenedor-datos-planta">
+                <p class="contenedor-datos-planta--puesto">MFG Trainee</p>
+                <p>Site Mexicali - Sabritas Planta 1</p>
+            </div>
+                
+            <a href="tel:+522712393634" class="enlace">+52 271 239 3634</a>
+            <a href="mailto:elcorreoquequieres@correo.com" class="enlace" style="margin-bottom: 1rem;">yovi.moralesmorales@pepsico.com</a>
+            
+            <div class="contenedor-redes-sociales">
+                <a href="https://wa.me/522712393634"><img src="./img/WhatsApp_Ícono.png" alt="Icono whatsapp" class="icono"></a>
+
+                <a href="https://mx.linkedin.com/in/yovs"><img src="./img/LinkedIn_Ícono.png" alt="icono linkedin" class="icono"></a>
+
+                <a href="https://web.yammer.com/main/users/eyJfdHlwZSI6IlVzZXIiLCJpZCI6IjE2OTAyNTI2NDAyNTYifQ/storyline"><img src="./img/Yammer_Ícono.png" alt="icono yammer" class="icono"></a>
+
+                <a href="https://goo.gl/maps/PhXVkaBGU4d5UddT8"><img src="./img/Ubicación_Ícono.png" alt="icono location" class="icono"></a>
+            </div>
+
+            <div class="contenedor-imagenes-corporativas">
+                <img src="./img/MC-PepsiCo_Logotipo.png" alt="logotipo de pepsico" class="imagenes-corporativas">
+                <img src="./img/MC-Next_Gen_Ícono.png" alt="logotipo de next gen" class="imagenes-corporativas">
+            </div>
+                
+        </div>
+    </div>
+    <script>
+        let altura = screen.height;
+        const cuerpo = document.getElementById("card");
+
+        window.addEventListener("resize", event => {
+            console.log("Cambio de dimensión");
+        });
+    </script>
+</body>
+</html>

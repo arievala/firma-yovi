@@ -1,0 +1,84 @@
+MC = "Modo claro"
+MO = "Modo oscuro"
+
+MC y MO tienen, esencialmente, la misma estructura:
+	1a. Línea: "Yovi Morales Morales". Fuente: Montserrat Extra-Bold. 15.6 puntos.
+		-Color MC: #004C90
+		-Colo MO: #FFFFFF
+	2a. Línea: "MFG Trainee". Fuente: Montserrat Classic. 10 puntos.
+		-Color MC: #918F8F
+		-Color MO: #F4F4F4
+	3a. Línea: "Site Mexicali — Sabritas Planta I". Fuente: Montserrat. 6 puntos. Cursiva.
+		-Color MC: #000000
+		-Color MO: #E7E7E7
+	4a. Línea: "+52 271 239 3634". Fuente: Monserrat. 8 puntos.
+		-Color MC: #0085CA
+		-Color MO: #F7DB32
+		NOTA: Ver si es posible que, desde dispositivos móviles, se realice una llamada a este número
+		si se presiona.
+	5a. Línea: "yovi.moralesmorales@pepsico.com". Fuente: Monserrat. 8 puntos.
+		-Color MC: #0085CA
+		-Color MO: #F7DB32
+		NOTA: Ver si es posible que, desde todos los dispositivos, en automático se abra la redacción de
+		nuevo correo a MI dirección al momento de hacer clic en esta.
+	ÍCONOS
+	>> Los íconos serán planos hasta que se les ponga el mouse encima; entonces crecerán un poco (no demasiado)
+	y se les desplegará una sombra pequeña alrededor de toda la circunferencia.
+	1er. Ícono: WhatsApp (imagen en carpeta). Al hacer clic en él se abre el chat a mi número. Esto se logra
+	asignádole la URL <https://wa.me/522712393634> al "botón" de WhatsApp.
+	2do. Ícono: LinkedIn (imagen en carpeta). Al hacer clic en él se abre mi perfil de la red social. 
+	<https://mx.linkedin.com/in/yovs>
+	3er. Ícono: Yammer (imagen en carpeta). Al hacer clic en él se abre mi perfil de la red social.
+	<https://web.yammer.com/main/users/eyJfdHlwZSI6IlVzZXIiLCJpZCI6IjE2OTAyNTI2NDAyNTYifQ/storyline>
+	4to. Ícono: Location (imagen en carpeta). Al hacer clic en él se abre mi ubicación en Google Maps.
+	<https://goo.gl/maps/PhXVkaBGU4d5UddT8>
+
+	ÍCONOS INFERIORES
+	>>No existe animación en estos íconos. Sólo aparecen las leyendas "PepsiCo" y "Next Gen 2023", respectivamente,
+	cuando el mouse se pone sobre ellos.
+	1er. Ícono: PepsiCo (imágenes en carpeta; regular para MC, blanco para MO). Al presionar, abre una nueva ventana
+	a <https://www.pepsico.com/>
+	2do. Ícono: Next Gen (imágenes en carpeta; regular para MC, blanco para MO). Al presionar, abre una nueva ventana
+	a <https://www.grupociadetalentos.com/pepsico2023/>
+
+	FOTOS DE PERFIL
+	Las fotos per se son el mismo archivo (es una imagen sin fondo y redondeada). El círculo diseñado para contener dicha
+	foto, sin embargo, varía, existiendo uno para MC y otro para MO (archivos disponibles en carpeta). Las fotos y sus res-
+	pectivos fondos no tienen funcionalidad más allá de desplegar mi rostro.
+
+	FONDO LATERAL
+	Los fondos laterales pueden estar constituidos bien por un solo tipo de imagen o múltiples. Lo ideal sería tener un fondo
+	y que el segundo tipo de imagen forme un patrón que se desliza suave y lentamente sobre dicho fondo (en el caso de MC, los
+	rombos se desplazan de derecha a izquierda; en el caso de MO, los círculos se desplazan de arriba a abajo). De poderse
+	hacer esto, debe, además, agregarse una sombra interior al filo de este cuadro en el lado derecho (más información sobre 
+	sombras más abajo en este documento o en las configuraciones de cada imagen en el PowerPoint de esta carpeta).
+	En caso de que lo primero no sea posible, puede sencillamente plantarse la imagen ya predeterminada.
+
+	
+	RESPONSIVO
+	La intención de dos diseños es que la firma pueda ser responsiva. Si el dispositivo o aplicación del lector está en modo
+	claro, visualizará el diseño MC; en caso de ser modo oscuro, el diseño a desplegar será el de MO. También se busca que la 
+	firma se optimice para dispositivos móviles.
+
+SOMBRAS
+
+FONDO AZUL
+SOMBRA FONDO
+transparency 72%
+Size 104%
+Blur 9pt
+Angle 135°
+Distance 12 pt
+
+SOMBRA CÍRCULO
+transparency 72%
+Blur 42pt
+Angle 225°
+Distance 12 pt
+
+FONDO NARANJA
+SOMBRA FONDO
+transparency 72%
+blur 66pt
+Angle 0°
+Distance 32pt
