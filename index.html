@@ -11,30 +11,56 @@
             src: url("src/montserrat/Montserrat-VariableFont_wght.ttf");
         }
 
+        :root {
+            --fondo-mc: #FFFFFF;
+            --fondo-mo: #545454;
+            --color-nombre-mc: #004C90;
+            --color-nombre-mo: #FFFFFF;
+            --color-puesto-mc: #918F8F;
+            --color-puesto-mo: #F4F4F4;
+            --color-ubicacion-mc: #000000;
+            --color-ubicacion-mo: #E7E7E7;
+            --color-enlace-mc: #0085CA;
+            --color-enlace-mo: #F7DB32;
+            --imagen-pepsico-mc: url(img/MC-PepsiCo_Logotipo.png);
+            --imagen-pepsico-mo: url(img/MO-PepsiCo_Logotipo.png);
+            --imagen-nextgen-mc: url(img/MC-Next_Gen_Ícono.png);
+            --imagen-nextgen-mo: url(img/MO-Next_Gen_Ícono.png);
+            --fondo-mosaico-mc: url(img/Fondo_Rombos_Azules_Texturizado_con_Sombra_Interior.png);
+            --fondo-mosaico-mo: url(img/Fondo_Círculos_Naranjas_Texturizado_con_Sombra_Interior.png);
+            --fondo-foto-mc: url(img/MC-Fondo_de_Foto.png);
+            --fondo-foto-mo: url(img/MO-Fondo_de_Foto.png);
+        }
+
         * {
             margin: 0;
             padding: 0;
             font-family: Montserrat;
         }
         .card {
-            background: white;
+            background: var(--fondo-mc);
             border: 1px solid black;
-            min-width: 80%;
-            max-width: 80%;
+            width: 100%;
+            max-width: 1000px;
             display: flex;
             min-height: 300px;
         }
 
+        .mb-2 {
+            margin-bottom: 2rem;
+        }
+
         .card__izquierdo {
-            background-image: url(img/Fondo_Rombos_Azules_Texturizado_con_Sombra_Interior.png);
+            background-image: var(--fondo-mosaico-mc);
             background-size: cover;
             display: flex;
             justify-content: center;
             align-items: center;
+            
         }
 
         .contenedor-imagen-perfil {
-            background-image: url(img/MC-Fondo_de_Foto.png);
+            background-image: var(--fondo-foto-mc);
             background-size: 100%;
             background-repeat: no-repeat;
             background-position: center;
@@ -43,6 +69,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
+            position: relative;
+            top: 10px;
+            left: 50px;
         }
 
         .card__izquierdo--imagen {
@@ -57,80 +86,134 @@
         }
         
         .card__derecho--nombre {
-            color: #004C90;
-            font-size: 1.4rem;
+            color: var(--color-nombre-mc);
+            font-size: 1.8rem;
             font-weight: 800;
             margin-bottom: 0.5rem;
         }
         
         .enlace {
             text-decoration: none;
-        }
-
-        .contenedor-datos-planta {
-            margin-bottom: 1rem;
+            color: var(--color-enlace-mc);
+            font-weight: 550;
         }
         
         .contenedor-datos-planta--puesto {
-            font-size: 0.8rem;
-            color: #918F8F;
+            font-size: 1.4rem;
+            color: var(--color-puesto-mc);
             font-weight: 600;
+        }
+
+        .contenedor-datos-planta--ubicacion {
+            font-size: 0.8rem;
+            font-style: italic;
+            font-weight: 500;
+            color: var(--color-ubicacion-mc);
         }
         
         .contenedor-redes-sociales {
-            width: 40%;
+            width: 60%;
             display: flex;
             justify-content: space-between;
-            margin-bottom: 1rem;
         }
 
         .icono {
-            width: 1.5rem;
+            width: 2rem;
+        }
+
+        .icono:hover {
+            scale: 1.1;
         }
 
         .contenedor-imagenes-corporativas {
             max-width: 100%;
             display: flex;
             align-items: center;
+            justify-content: space-between;
+            
         }
 
         .imagenes-corporativas {
             width: 40%;
-            border: 1px solid blue;
             max-height: 58px;
         }
 
-        @media only screen and (max-width:540px){
-            .card__izquierdo {
-                flex-grow: 1;
+        .contenido {
+            width: 40%;
+            height: 58px;
+        }
+
+        .contenido-pepsico {
+            background-image: var(--imagen-pepsico-mc);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        .contenido-nextgen {
+            background-image: var(--imagen-nextgen-mc);
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        @media (prefers-color-scheme: dark){
+            .card {
+                background: var(--fondo-mo);
             }
 
-            .card__derecho {
-                flex-grow: 3;
+            .card__derecho--nombre {
+                color: var(--color-nombre-mo);
             }
-        }
+
+            .contenedor-datos-planta--puesto {
+                color: var(--color-puesto-mo);
+            }
+
+            .contenedor-datos-planta--ubicacion {
+                color: var(--color-ubicacion-mo);
+            }
+
+            .enlace {
+                color: var(--color-enlace-mo);
+            }
+
+            .contenido-pepsico {
+                background-image: var(--imagen-pepsico-mo);
+            }
+
+            .contenido-nextgen {
+                background-image: var(--imagen-nextgen-mo);
+            }
+
+            .card__izquierdo {
+                background-image: var(--fondo-mosaico-mo);
+            }
+
+            .contenedor-imagen-perfil {
+                background-image: var(--fondo-foto-mo);
+            }
+        }        
     </style>
 </head>
-<body id="cuerpo">
+<body>
     <div class="card" id="card">
         <div class="card__izquierdo">
             <div class="contenedor-imagen-perfil">
-                <img src="./img/Foto_Circular_sin_Fondo.png" alt="Foto de perfil" class="card__izquierdo--imagen">
+                <img src="https://arievala.github.io/firma-yovi/img/Foto_Circular_sin_Fondo.png" alt="Foto de perfil" class="card__izquierdo--imagen">
             </div>
         </div>
 
         <div class="card__derecho">
             <p class="card__derecho--nombre">Yovi Morales Morales</p>
 
-            <div class="contenedor-datos-planta">
+            <div class="contenedor-datos-planta mb-2">
                 <p class="contenedor-datos-planta--puesto">MFG Trainee</p>
-                <p>Site Mexicali - Sabritas Planta 1</p>
+                <p class="contenedor-datos-planta--ubicacion">Site Mexicali - Sabritas Planta 1</p>
             </div>
                 
             <a href="tel:+522712393634" class="enlace">+52 271 239 3634</a>
-            <a href="mailto:elcorreoquequieres@correo.com" class="enlace" style="margin-bottom: 1rem;">yovi.moralesmorales@pepsico.com</a>
+            <a href="mailto:elcorreoquequieres@correo.com" class="enlace mb-2">yovi.moralesmorales@pepsico.com</a>
             
-            <div class="contenedor-redes-sociales">
+            <div class="contenedor-redes-sociales mb-2">
                 <a href="https://wa.me/522712393634"><img src="./img/WhatsApp_Ícono.png" alt="Icono whatsapp" class="icono"></a>
 
                 <a href="https://mx.linkedin.com/in/yovs"><img src="./img/LinkedIn_Ícono.png" alt="icono linkedin" class="icono"></a>
@@ -141,19 +224,11 @@
             </div>
 
             <div class="contenedor-imagenes-corporativas">
-                <img src="./img/MC-PepsiCo_Logotipo.png" alt="logotipo de pepsico" class="imagenes-corporativas">
-                <img src="./img/MC-Next_Gen_Ícono.png" alt="logotipo de next gen" class="imagenes-corporativas">
+                <div class="contenido contenido-pepsico"></div>
+                <div class="contenido contenido-nextgen"></div>
             </div>
                 
         </div>
     </div>
-    <script>
-        let altura = screen.height;
-        const cuerpo = document.getElementById("card");
-
-        window.addEventListener("resize", event => {
-            console.log("Cambio de dimensión");
-        });
-    </script>
 </body>
 </html>
